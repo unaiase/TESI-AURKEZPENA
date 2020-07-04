@@ -1,0 +1,329 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+%\usepackage{default}
+
+%\setbeamertemplate{footline}[frame number]
+
+\setbeamertemplate{footline}
+{
+    \leavevmode%
+    \hbox{%
+        \begin{beamercolorbox}[wd=.22\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+            \usebeamerfont{author in head/foot}\insertshortauthor
+        \end{beamercolorbox}%
+        %\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+        %    \usebeamerfont{title in head/foot}\insertshorttitle
+        %\end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.28\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+            \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+            \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+        \end{beamercolorbox}}%
+        \vskip0pt%
+    }
+
+\author{Unai Aseginolaza}
+\title{Second order phase transition, spectral functions and thermal conductivity of thermoelectric SnSe}
+\institute{Raffaello Bianco, Lorenzo Monacelli, Lorenzo Paulatto, Francesco Mauri, Matteo Calandra, Aitor Bergara and Ion Errea}
+%\institute{EMRS spring meeting 2018}
+\date{\today}
+\titlegraphic{\includegraphics[width=.35\textwidth,height=.25\textheight]{Pictures/upv.png}
+              \includegraphics[width=.25\textwidth,height=.3\textheight]{Pictures/CFM.jpg}
+              \includegraphics[width=.35\textwidth,height=.2\textheight]{Pictures/DIPC.jpg}}
+
+\begin{document}
+
+\setbeamertemplate{navigation symbols}{}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\begin{frame}
+ \frametitle{Thermoelectric efficiency: power generation and cooling}
+ \vspace{-0.5cm}
+ \begin{equation}
+  ZT=\frac{S^{2}\sigma T}{\kappa}, \hspace{0.6cm} S=-\frac{\Delta V}{\Delta T}%, \hspace{0.6cm} ZT_{ave}=\frac{1}{T_{h}-T_{c}}\int_{T_{c}}^{T_{c}}ZTdT
+  \nonumber
+ \end{equation}
+ \begin{center}
+  \includegraphics[width=0.7\linewidth]{Pictures/generation-cooling.png}
+ \end{center}
+ \vspace{-0.1cm}
+ \begin{tiny}
+  X. Zhang, L-D. Zhao / Journal of Materiomics 1 (2015) 92-105
+ \end{tiny}
+\end{frame}
+
+%\begin{frame}
+% \frametitle{SnSe}
+% \vspace{-0.5cm}
+% \begin{center}
+%  \includegraphics[width=0.9\linewidth]{Pictures/zt-year.pdf}
+% \end{center}
+%\end{frame}
+
+\begin{frame}
+ \frametitle{Monochalcogenides: good thermoelectrics}
+ \vspace{-0.5cm}
+ \begin{center}
+  \includegraphics[width=0.9\linewidth]{Pictures/nature.pdf}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Monochalcogenides: good thermoelectrics}
+ \vspace{-0.5cm}
+ \begin{center}
+  \includegraphics[width=0.9\linewidth]{Pictures/table.pdf}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{SnSe}
+ \vspace{-0.5cm}
+ \begin{center}
+  \includegraphics[width=0.9\linewidth]{Pictures/SnSe.pdf}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Anharmonic theory: SSCHA}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+ \begin{itemize}
+  \item \color{red}{Harmonic approximation}: 
+  \begin{itemize}
+   \item It does not work in monochalcogenides because they show harmonic instabilities.
+  \end{itemize}
+ \end{itemize}
+ \begin{itemize}
+  \item \color{red}{Perturbative approaches are not an option.}
+  \begin{itemize}
+   \item They are built on top of the harmonic theory.
+  \end{itemize}
+ \end{itemize}
+\end{column}
+\begin{column}{0.45\textwidth}
+ \begin{center}
+  \includegraphics[width=0.9\linewidth]{Pictures/instability.png}
+ \end{center}
+\end{column}
+\end{columns}
+\begin{itemize}
+  \item \color{teal}{We apply a variational non-perturbative approach with anharmonic terms to infinite order: Stochastic self-consistent harmonic 
+  approximation (SSCHA)}
+  \begin{itemize}
+   \item Vibrational Free energy minimized with respect to $\boldsymbol{\mathcal{R}}$ and harmonic $\boldsymbol{\Phi}$.
+  \end{itemize}
+\end{itemize}
+ \begin{tiny}
+  I. Errea et al. Physical Review Letters 111 (17), 177002 (2013)
+ \end{tiny}
+ \begin{tiny}
+  R. Bianco et al. Physical Review B 96, 014111 (2017)
+ \end{tiny}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Phase transition temperature}
+ \vspace{-0.25cm}
+ \begin{center}
+  \includegraphics[width=0.80\linewidth]{Pictures/continuous.png}
+  %\includegraphics[width=0.8\linewidth]{Pictures/landau.pdf}
+ \end{center}
+ \begin{center}
+  \includegraphics[width=0.70\linewidth]{Pictures/data.eps}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Results: phase transition temperature}
+ \begin{equation}
+  \frac{\partial^{2}F}{\partial Q^{2}}\propto\omega_{Y_{1}}^{2}(T), \hspace{0.2cm} \frac{\partial^{2}F}{\partial\boldsymbol{\mathcal{
+  R}}\partial\boldsymbol{\mathcal{R}}}=\boldsymbol{\Phi}+\overset{(3)}{\boldsymbol{\Phi}}\boldsymbol{W}\overset{(3)}{\boldsymbol{\Phi}},
+  \hspace{0.2cm} \overset{(3)}{\boldsymbol{\Phi}}=\left\langle\frac{\partial^{3}V}{\partial\boldsymbol{\mathcal{R}}^{3}}\right\rangle
+ \nonumber
+ \end{equation}
+ \begin{center}
+  \includegraphics[width=0.65\linewidth]{Pictures/proportional.pdf}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Results: phase transition temperature}
+ \vspace{-0.5cm}
+ \begin{center}
+  \includegraphics[width=0.9\linewidth]{Pictures/freq-main-single.eps}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Results: phase transition temperature}
+ \vspace{-0.5cm}
+ \begin{center}
+  \includegraphics[width=0.9\linewidth]{Pictures/freq-main.eps}
+ \end{center}
+\end{frame}
+
+%\begin{frame}
+% \frametitle{Results: phase transition temperature}
+% \begin{table}
+%\begin{center}
+%\begin{tabular*}{0.65\textwidth}{l c c c c c c}
+% \hline
+% \hline
+ %\multicolumn{4}{|c|}{Country List} \\
+% Approximation & $b$ (a$_{0}$)& $T_{c}$ (K) & $P_{yy}$ (Gpa)\\
+% \hline
+% LDA theory  & 7.90 & 200 &  0.7 \\
+% LDA Exp.    & 8.13 & 625 & -2.2 \\
+% PBE theory  & 8.13 & 380 &  1.0 \\
+% PBE Exp.    & 8.13 & 380 &  1.2 \\
+% Stretched   & 8.27 & 425 & -0.4 \\
+% \hline
+% \hline
+%\end{tabular*}
+%\end{center}
+%\end{table}
+%\begin{itemize}
+% \item Experimental $T_{c}$ is $800$ K.
+% \item Huge volume and exchange-correlation dependence.
+%\end{itemize}
+%\end{frame}
+
+\begin{frame}
+ \frametitle{Results: spectral function}
+ \vspace{-0.5cm}
+ \begin{equation}
+ \sigma(\mathbf{q},\omega)=\frac{1}{\pi}\times\sum_{\mu}\frac{-\omega Im\Pi_{\mu}(\mathbf{q},\omega)}{(\omega^{2}-\omega_{\mu}^{2}
+ (\mathbf{q})-Re\Pi_{\mu}(\mathbf{q},\omega))^{2}+(Im\Pi_{\mu}(\mathbf{q},\omega))^{2}}
+ \nonumber
+ \end{equation}
+ \begin{center}
+  \includegraphics[width=0.65\linewidth]{Pictures/ins-toy.eps}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Results: Anharmonic phonons (Lorentzian approximation)}
+ \vspace{-0.5cm}
+ \begin{center}
+  \includegraphics[width=0.9\linewidth]{Pictures/ins1.pdf}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Results: spectral function}
+ \begin{center}
+  \includegraphics[width=0.5\linewidth]{Pictures/full-ins.pdf}
+  \includegraphics[width=0.5\linewidth]{Pictures/ins.eps}
+ \end{center}
+ \begin{itemize}
+  \item The phase transition is measurable in INS experiments.
+  \item There are modes that strongly deviate from the Lorentzian limit.
+ \end{itemize}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Results: Lattice thermal conductivity}
+ \begin{center}
+  \includegraphics[width=0.80\linewidth]{Pictures/tk-exp.eps}
+ \end{center}
+ \begin{tiny}
+  L.D. Zhao et al. Nature 508, 373 (2014), 
+  Ibrahim et al. Appl. Phys. Lett. 110, 032103 (2017)
+ \end{tiny}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Third-order force-constants}
+ \begin{itemize}
+  \item Perturbative
+ \end{itemize}
+ \begin{huge}
+ \begin{equation}
+  \nonumber
+  \left[\frac{\partial^{3}V}{\partial\boldsymbol{R}^{3}}\right]_{0}
+ \end{equation}
+ \end{huge}
+ \begin{itemize}
+  \item Non-perturbative
+ \end{itemize}
+ \begin{huge}
+ \begin{equation}
+  \nonumber
+  \left\langle\frac{\partial^{3}V}{\partial\boldsymbol{R}^{3}}\right\rangle_{\rho_{\mathcal{H}}}
+ \end{equation}
+ \end{huge}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Results: Lattice thermal conductivity}
+ \begin{center}
+  \includegraphics[width=0.80\linewidth]{Pictures/tk-exp-p.eps}
+ \end{center}
+ \begin{tiny}
+  L.D. Zhao et al. Nature 508, 373 (2014), 
+  Ibrahim et al. Appl. Phys. Lett. 110, 032103 (2017)
+ \end{tiny}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Electronic transport within semiclassical Boltzman transport theory}
+ \begin{equation}
+ \nonumber
+ \sigma(T,\mu) = e^2 \int_{-\infty}^{\infty} d\varepsilon \left[-\frac{\partial f(T,\mu,\varepsilon)}{\partial\epsilon}\right] \Sigma(\varepsilon),
+ \end{equation}
+ \begin{equation}
+  \nonumber
+  S(T,\mu) = \frac{e}{T\sigma(T,\mu)} \int_{-\infty}^{\infty} d\varepsilon \left[-\frac{\partial f(T,\mu,\varepsilon)}{\partial\epsilon}\right] \Sigma(\varepsilon) (\varepsilon - \mu), 
+ \end{equation} 
+ \begin{equation}
+ \nonumber
+ \Sigma(\varepsilon) = \frac{1}{\Omega N_{\mathbf{k}}} \sum_{n\mathbf{k}} \tau^e_{n\mathbf{k}}  |\mathbf{v}_{n\mathbf{k}}|^{2} \delta( \varepsilon-\varepsilon_{n\mathbf{k}} ), 
+ \end{equation}
+ \begin{itemize}
+  \item We use the Boltztrap software package
+ \end{itemize}
+ \begin{tiny}
+  G. K. Madsen et al. Computer Physics Communications 175, 67 (2006)
+ \end{tiny}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Power factors of SnSe and SnS}
+ \begin{center}
+  \includegraphics[width=0.80\linewidth]{Pictures/PF.eps}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Thermal conductivities of SnS and SnSe}
+ \begin{center}
+  \includegraphics[width=0.80\linewidth]{Pictures/tk-paper2.eps}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Conclusions}
+ \begin{enumerate}
+  \item The phase transition is second order.
+  \item Strong anharmonic renormalization in the phonon spectrum.
+  \item Strongly anharmonic modes at $\Gamma$ show largest linewidths.
+  \item Spectral function displays strongly non-Lorentzian features.
+  \item In plane thermal conductivity in good agreement with experiments.
+  \item Non-perturbative effects are important for  the thermal conductivity.
+  \item SnS high temperature efficient thermoelectric material.
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Acknowledgements}
+ \vspace{-0.5cm}
+ \begin{center}
+  \includegraphics[width=0.85\linewidth]{Pictures/acknowledge.pdf}
+ \end{center}
+\end{frame}
+
+\end{document}

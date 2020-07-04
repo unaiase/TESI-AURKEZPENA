@@ -1,0 +1,264 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage{default}
+
+%\setbeamertemplate{footline}[frame number]
+
+\setbeamertemplate{footline}
+{
+    \leavevmode%
+    \hbox{%
+        \begin{beamercolorbox}[wd=.22\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+            \usebeamerfont{author in head/foot}\insertshortauthor
+        \end{beamercolorbox}%
+        %\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+        %    \usebeamerfont{title in head/foot}\insertshorttitle
+        %\end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.28\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+            \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+            \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+        \end{beamercolorbox}}%
+        \vskip0pt%
+    }
+
+\author{Unai Aseguinolaza Aguirreche}
+\title{Second order phase transition, spectral functions and thermal conductivity of thermoelectric SnSe}
+\institute{Raffaello Bianco, Lorenzo Monacelli, Lorenzo Paulatto, Francesco Mauri, Matteo Calandra, Aitor Bergara and Ion Errea}
+%\institute{EMRS spring meeting 2018}
+\date{\today}
+\titlegraphic{\includegraphics[width=.35\textwidth,height=.25\textheight]{Pictures/upv.png}
+              \includegraphics[width=.25\textwidth,height=.3\textheight]{Pictures/CFM.jpg}
+              \includegraphics[width=.35\textwidth,height=.2\textheight]{Pictures/DIPC.jpg}}
+
+\begin{document}
+
+\setbeamertemplate{navigation symbols}{}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+ 
+\begin{frame}
+ \frametitle{Outline}
+ \begin{enumerate}
+  \item Introduction: Thermoelectricity
+  \begin{itemize}
+   \item Thermoelectric efficiency: power generation and cooling
+   \item Monochalcogenides
+  \end{itemize}
+  \item SnSe
+  \begin{itemize}
+   \item Thermoelectric properties
+   \item Anharmonic lattice
+  \end{itemize}
+  \item Anharmonic theory: SSCHA
+  \item Results
+  \begin{itemize}
+   \item Phase transition temperature
+   \item Spectral functions
+   \item Thermal conductivity
+  \end{itemize}
+  \item Conclusions
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Thermoelectric efficiency: power generation and cooling}
+ \vspace{-0.5cm}
+ \begin{equation}
+  ZT=\frac{S^{2}\sigma T}{\kappa}, \hspace{0.6cm} S=-\frac{\Delta V}{\Delta T}%, \hspace{0.6cm} ZT_{ave}=\frac{1}{T_{h}-T_{c}}\int_{T_{c}}^{T_{c}}ZTdT
+  \nonumber
+ \end{equation}
+ \begin{center}
+  \includegraphics[width=0.7\linewidth]{Pictures/generation-cooling.png}
+ \end{center}
+ \vspace{-0.1cm}
+ \begin{tiny}
+  X. Zhang, L-D. Zhao / Journal of Materiomics 1 (2015) 92-105
+ \end{tiny}
+\end{frame}
+
+%\begin{frame}
+% \frametitle{SnSe}
+% \vspace{-0.5cm}
+% \begin{center}
+%  \includegraphics[width=0.9\linewidth]{Pictures/zt-year.pdf}
+% \end{center}
+%\end{frame}
+
+\begin{frame}
+ \frametitle{Monochalcogenides: good thermoelectrics}
+ \vspace{-0.5cm}
+ \begin{center}
+  \includegraphics[width=0.9\linewidth]{Pictures/nature.pdf}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Monochalcogenides: good thermoelectrics}
+ \vspace{-0.5cm}
+ \begin{center}
+  \includegraphics[width=0.9\linewidth]{Pictures/table.pdf}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{SnSe}
+ \vspace{-0.5cm}
+ \begin{center}
+  \includegraphics[width=0.9\linewidth]{Pictures/SnSe.pdf}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Anharmonic theory: SSCHA}
+ \begin{itemize}
+  \item Harmonic approximation: 
+  \begin{itemize}
+   \item It does not work in monochalcogenides because they show harmonic instabilities.
+  \end{itemize}
+  \item Perturbative approaches are not an option.
+  \begin{itemize}
+   \item They are built on top of the harmonic theory.
+  \end{itemize}
+  \item We apply a variational non-perturbative approach with anharmonic terms to infinite order: Stochastic self-consistent harmonic 
+  approximation (SSCHA)
+  \begin{itemize}
+   \item Vibrational Free energy minimized with respect to $\boldsymbol{\mathcal{R}}$ and harmonic $\boldsymbol{\Phi}$.
+  \end{itemize}
+ \end{itemize}
+ \vspace{0.2cm}
+ %\begin{equation}
+ % \Phi_{SSCHA}=\frac{\partial^{2}F}{\partial u(n)\partial u(n')}=\Phi_{aux}+\Phi^{(3)}\Lambda\Phi^{(3)}+\Phi^{(3)}\Lambda\Phi^{(4)}\Lambda\Phi^{(3)}
+ %\nonumber
+ %\end{equation}
+ \begin{tiny}
+  I. Errea et al. Physical Review Letters 111 (17), 177002 (2013)
+ \end{tiny}
+ \begin{tiny}
+  R. Bianco et al. Physical Review B 96, 014111 (2017)
+ \end{tiny}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Phase transition temperature}
+ \vspace{-0.25cm}
+ \begin{center}
+  \includegraphics[width=0.8\linewidth]{Pictures/landau.pdf}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Results: phase transition temperature}
+ \begin{equation}
+  \frac{\partial^{2}F}{\partial Q^{2}}=\frac{\partial^{2}F}{\partial u(n)\partial u(n')}=\Phi_{aux}+\overset{(3)}{\Phi}\Lambda(0)\overset{
+  (3)}{\Phi}+\overset{(3)}{\Phi}\Lambda(0)\overset{(4)}{\Phi}\Lambda(0)\overset{(3)}{\Phi}\propto\omega_{Y_{1}}^{S}(T)
+ \nonumber
+ \end{equation}
+ \begin{center}
+  \includegraphics[width=0.65\linewidth]{Pictures/proportional.pdf}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Results: phase transition temperature}
+ \vspace{-0.5cm}
+ \begin{center}
+  \includegraphics[width=0.9\linewidth]{Pictures/freq-main.eps}
+ \end{center}
+\end{frame}
+
+%\begin{frame}
+% \frametitle{Results: phase transition temperature}
+% \begin{table}
+%\begin{center}
+%\begin{tabular*}{0.65\textwidth}{l c c c c c c}
+% \hline
+% \hline
+ %\multicolumn{4}{|c|}{Country List} \\
+% Approximation & $b$ (a$_{0}$)& $T_{c}$ (K) & $P_{yy}$ (Gpa)\\
+% \hline
+% LDA theory  & 7.90 & 200 &  0.7 \\
+% LDA Exp.    & 8.13 & 625 & -2.2 \\
+% PBE theory  & 8.13 & 380 &  1.0 \\
+% PBE Exp.    & 8.13 & 380 &  1.2 \\
+% Stretched   & 8.27 & 425 & -0.4 \\
+% \hline
+% \hline
+%\end{tabular*}
+%\end{center}
+%\end{table}
+%\begin{itemize}
+% \item Experimental $T_{c}$ is $800$ K.
+% \item Huge volume and exchange-correlation dependence.
+%\end{itemize}
+%\end{frame}
+
+\begin{frame}
+ \frametitle{Results: spectral function}
+ \vspace{-0.5cm}
+ \begin{equation}
+ \sigma(\mathbf{q},\omega)=\frac{1}{\pi}\times\sum_{\mu}\frac{-\omega Im\Pi_{\mu}(\mathbf{q},\omega)}{(\omega^{2}-\omega_{\mu}^{2}
+ (\mathbf{q})-Re\Pi_{\mu}(\mathbf{q},\omega))^{2}+(Im\Pi_{\mu}(\mathbf{q},\omega))^{2}}
+ \nonumber
+ \end{equation}
+ \begin{center}
+  \includegraphics[width=0.65\linewidth]{Pictures/ins-toy.eps}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Results: Anharmonic phonons (Lorentzian approximation)}
+ \vspace{-0.5cm}
+ \begin{center}
+  \includegraphics[width=0.9\linewidth]{Pictures/ins1.pdf}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Results: spectral function}
+ \begin{center}
+  \includegraphics[width=0.4\linewidth]{Pictures/full-ins.pdf}
+  \includegraphics[width=0.6\linewidth]{Pictures/ins.eps}
+ \end{center}
+ \begin{itemize}
+  \item The phase transition is measurable in INS experiments.
+  \item There are modes that strongly deviate from the Lorentzian limit.
+ \end{itemize}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Results: Lattice thermal conductivity}
+ \begin{center}
+  \includegraphics[width=0.85\linewidth]{Pictures/tk-exp.eps}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Results: Lattice thermal conductivity}
+ \begin{center}
+  \includegraphics[width=0.85\linewidth]{Pictures/tk-exp-p.eps}
+ \end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Conclusions}
+ \begin{enumerate}
+  \item Anharmonic static phonon spectrum explains second order transition.
+  \item Strong anharmonic renormalization in the phonon spectrum.
+  \item Strongly anharmonic modes show largest linewidths.
+  \item Spectral function displays strongly anharmonic features.
+  \item In plane Thermal conductivity in good agreement with experiments.
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Acknowledgements}
+ \vspace{-0.5cm}
+ \begin{center}
+  \includegraphics[width=0.85\linewidth]{Pictures/acknowledge.pdf}
+ \end{center}
+\end{frame}
+
+\end{document}
