@@ -3,4 +3,6 @@
 *.toc
 *.nav
 *.log
+*.backup
+*.out
 Aurkezpena.pdf
