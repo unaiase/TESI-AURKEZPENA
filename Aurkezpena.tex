@@ -45,6 +45,8 @@
 
 \setbeamertemplate{navigation symbols}{}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}
  \titlepage
 \end{frame}
@@ -67,6 +69,8 @@
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}
 
 \frametitle{Outline}
@@ -83,6 +87,8 @@
 \end{itemize}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
 
@@ -102,6 +108,8 @@ X. Zhang, L-D. Zhao / Journal of Materiomics 1 (2015) 92-105
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}
 
 \frametitle{Introduction}
@@ -119,6 +127,8 @@ X. Zhang, L-D. Zhao / Journal of Materiomics 1 (2015) 92-105
 \end{tiny}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
 
@@ -140,6 +150,8 @@ X. Zhang, L-D. Zhao / Journal of Materiomics 1 (2015) 92-105
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}
 
 \frametitle{Introduction}
@@ -154,6 +166,8 @@ conductivity ($\kappa=\kappa_{el} + \kappa_{l}$)
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}
 
 \frametitle{Introduction}
@@ -164,6 +178,8 @@ conductivity ($\kappa=\kappa_{el} + \kappa_{l}$)
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}
 
 \frametitle{Introduction}
@@ -173,5 +189,190 @@ conductivity ($\kappa=\kappa_{el} + \kappa_{l}$)
 \end{center}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Theoretical framework}
+\vspace{-0.1cm}
+ \begin{itemize}
+  \item Ionic Hamiltonian
+ \end{itemize}
+ \begin{equation}
+  \nonumber
+  H=T+V(\boldsymbol{R})
+ \end{equation}
+where $\boldsymbol{R}=\boldsymbol{R}_{0}+\boldsymbol{u}$.
+\begin{itemize}
+ \item Assuming that $V(\boldsymbol{R})$ is well reproduced by a quadratic potential in the range of $\boldsymbol{u}$, Taylor expand the potential
+\end{itemize}
+\begin{equation}
+ \nonumber
+ V(\boldsymbol{R})\simeq V(\boldsymbol{R}_{0}) + \frac{1}{2}\sum_{ab}\phi_{ab}u_{a}u_{b} + O(u^{3})
+\end{equation}
+where $\phi_{ab}=\partial^{2}V/\partial u_{a}\partial u_{b}|_{0}$.
+\begin{equation}
+ \nonumber
+ V^{harm}(\boldsymbol{R})= V(\boldsymbol{R}_{0}) + \frac{1}{2}\sum_{ab}\phi_{ab}u_{a}u_{b} 
+\end{equation}
+\begin{itemize}
+ \item This Hamiltonian can be solved exactly.
+ \item It provides well defined phonon quasiparticles
+\end{itemize}
+\begin{equation}
+ \nonumber
+ \sum_{b}\phi_{ab}\epsilon^{b}_{\mu}=M\omega_{\mu}^{2}\epsilon^{a}_{\mu}
+\end{equation}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+ \frametitle{Anharmonic theory: SSCHA}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+ \begin{itemize}
+  \item \color{red}{Harmonic approximation}:
+  \begin{itemize}
+   \item It does not work in monochalcogenides because they show harmonic instabilities.
+  \end{itemize}
+ \end{itemize}
+ \begin{itemize}
+  \item \color{red}{Perturbative approaches are not an option.}
+  \begin{itemize}
+   \item They are built on top of the harmonic theory.
+  \end{itemize}
+ \end{itemize}
+\end{column}
+\begin{column}{0.45\textwidth}
+ \begin{center}
+  \includegraphics[width=0.9\linewidth]{Pictures/THEORY/instability.png}
+ \end{center}
+\end{column}
+\end{columns}
+\begin{itemize}
+  \item \color{teal}{We apply a variational non-perturbative approach with anharmonic terms to infinite order: Stochastic self-consistent harmonic
+  approximation (SSCHA)}
+\end{itemize}
+ \begin{tiny}
+  I. Errea et al. Physical Review Letters 111 (17), 177002 (2013)
+ \end{tiny}
+ \begin{tiny}
+  R. Bianco et al. Physical Review B 96, 014111 (2017)
+ \end{tiny}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Theoretical framework}
+ \begin{itemize}
+  \item SCHA is a method for approximating the vibrational free energy of a crystal.
+ \end{itemize}
+\begin{equation}
+ \nonumber
+ F_{H}=tr(\rho_{H}H)+\frac{1}{k_{B}T}tr(\rho_{H}ln\rho_{H}) 
+\end{equation}
+\begin{equation}
+ \nonumber
+ \mathcal{F}_{H}[\mathcal{H}]=tr(\rho_{\mathcal{H}}H)+\frac{1}{k_{B}T}tr(\rho_{\mathcal{H}}ln\rho_{\mathcal{H}})=F_{\mathcal{H}}+\langle V-\mathcal{V}\rangle_{\rho_{\mathcal{H}}} 
+\end{equation}
+\begin{equation}
+ \nonumber
+ F_{H}\le\mathcal{F}_{H}[\mathcal{H}] 
+\end{equation}
+\begin{itemize}
+\item We take a harmonic trial density matrix $\rho_{\mathcal{H}}\equiv\rho_{\mathcal{H}}(\boldsymbol{\Phi},\boldsymbol{\mathcal{R}})$. Variables $\boldsymbol{\Phi}$ (SCHA/auxiliary phonons).
+ \item The SCHA provides the harmonic density matrix that minimizes the free energy.
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Theoretical framework}
+\vspace{-0.5cm}
+\begin{center}
+\includegraphics[width=0.85\linewidth]{Pictures/THEORY/transition.eps}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Theoretical framework}
+\begin{itemize}
+ \item The free energy is a well defined quantity within the SCHA.
+ \item For a given temperature, experimentally measured phonon frequencies will be centered in the phonon frequencies defined by $\partial^{2}\mathcal{F}/\partial\boldsymbol{\mathcal{R}}^{2}$.
+\end{itemize}
+\begin{equation}
+\nonumber
+ \frac{\partial^{2}\mathcal{F}}{\partial\boldsymbol{\mathcal{R}}\partial\boldsymbol{\mathcal{R}}}=\boldsymbol{\Phi}+\overset{(3)}{\boldsymbol{\Phi}}\Lambda[\boldsymbol{1}-\overset{(4)}{\boldsymbol{
+ \Phi}}\Lambda]^{-1}\overset{(3)}{\boldsymbol{\Phi}}
+\end{equation}
+\begin{itemize}
+ \item $\overset{(3)}{\boldsymbol{\Phi}}=\left\langle\frac{\partial^{3}V}{\partial\boldsymbol{R}^{3}}\right\rangle_{\rho_{\mathcal{H}}}$, \hspace{0.2cm}
+       $\overset{(4)}{\boldsymbol{\Phi}}=\left\langle\frac{\partial^{4}V}{\partial\boldsymbol{R}^{4}}\right\rangle_{\rho_{\mathcal{H}}}$, and
+       $\Lambda\equiv\Lambda(\boldsymbol{\Phi})$.
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+ \frametitle{Theoretical framework}
+ \begin{itemize}
+ \item The static theory can be expanded by a dynamical ansatz.
+ \end{itemize}
+ \begin{equation}
+ \sigma(\mathbf{q},\omega)=\frac{1}{\pi}\times\sum_{\mu}\frac{-\omega Im\Pi_{\mu}(\mathbf{q},\omega)}{(\omega^{2}-\omega_{\mu}^{2}
+ (\mathbf{q})-Re\Pi_{\mu}(\mathbf{q},\omega))^{2}+(Im\Pi_{\mu}(\mathbf{q},\omega))^{2}}
+ \nonumber
+ \end{equation}
+ \begin{center}
+  \includegraphics[width=0.65\linewidth]{Pictures/THEORY/ins-toy1.eps}
+ \end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Theoretical framework}
+\begin{equation}
+\nonumber
+\mathcal{Z}_{\mu}(\mathbf{q},\omega)=\sqrt{\omega_{\mu}^{2}(\mathbf{q})+\Pi_{\mu}(\mathbf{q},\omega+i0^{+})}
+\end{equation}
+\begin{equation}
+\nonumber
+ \Omega_{\mu}(\mathbf{q})=Re\mathcal{Z}_{\mu}(\mathbf{q},\omega_{\mu}(\mathbf{q})),
+\end{equation}
+\begin{equation}
+\nonumber
+ \Gamma_{\mu}(\mathbf{q})=-Im\mathcal{Z}_{\mu}(\mathbf{q},\omega_{\mu}(\mathbf{q}))
+\end{equation}
+\begin{center}
+  \includegraphics[width=0.6\linewidth]{Pictures/THEORY/ins-toy2.eps}
+ \end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% HERE THERE MUST BE A SLIDE EXPLAINING THE SMA FOR LATTICE THERMAL CONDUCTIVITY
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
