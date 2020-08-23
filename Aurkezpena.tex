@@ -217,7 +217,7 @@ where $\phi_{ab}=\partial^{2}V/\partial u_{a}\partial u_{b}|_{0}$.
  V^{harm}(\boldsymbol{R})= V(\boldsymbol{R}_{0}) + \frac{1}{2}\sum_{ab}\phi_{ab}u_{a}u_{b} 
 \end{equation}
 \begin{itemize}
- \item This Hamiltonian can be solved exactly.
+ \item This Hamiltonian (Harmonic Hamiltonian) can be solved exactly.
  \item It provides well defined phonon quasiparticles
 \end{itemize}
 \begin{equation}
@@ -287,7 +287,7 @@ where $\phi_{ab}=\partial^{2}V/\partial u_{a}\partial u_{b}|_{0}$.
  F_{H}\le\mathcal{F}_{H}[\mathcal{H}] 
 \end{equation}
 \begin{itemize}
-\item We take a harmonic trial density matrix $\rho_{\mathcal{H}}\equiv\rho_{\mathcal{H}}(\boldsymbol{\Phi},\boldsymbol{\mathcal{R}})$. Variables $\boldsymbol{\Phi}$ (SCHA/auxiliary phonons).
+	\item We take a harmonic trial density matrix $\rho_{\mathcal{H}}\equiv\rho_{\mathcal{H}}(\boldsymbol{\Phi},\boldsymbol{\mathcal{R}})$. Variables $\boldsymbol{\Phi}$ (SCHA/auxiliary phonons) and $\boldsymbol{\mathcal{R}}$ atomic centroids.
  \item The SCHA provides the harmonic density matrix that minimizes the free energy.
 \end{itemize}
 
@@ -298,9 +298,11 @@ where $\phi_{ab}=\partial^{2}V/\partial u_{a}\partial u_{b}|_{0}$.
 \begin{frame}
 
 \frametitle{Theoretical framework}
-\vspace{-0.5cm}
+\begin{itemize}
+\item Landau Theory of second-order phase transitions
+\end{itemize}
 \begin{center}
-\includegraphics[width=0.85\linewidth]{Pictures/THEORY/transition.eps}
+\includegraphics[width=0.8\linewidth]{Pictures/THEORY/transition.eps}
 \end{center}
 
 \end{frame}
@@ -371,7 +373,26 @@ where $\phi_{ab}=\partial^{2}V/\partial u_{a}\partial u_{b}|_{0}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% HERE THERE MUST BE A SLIDE EXPLAINING THE SMA FOR LATTICE THERMAL CONDUCTIVITY
+\begin{frame}
+
+\frametitle{Theortical framework}
+\begin{itemize}
+ \item The Lorentzian definition of phonons provides a straightforward way of calculating the lattice thermal conductivity
+\end{itemize}
+\begin{equation}
+\nonumber
+ \kappa_{l}=\frac{1}{N_{\mathbf{q}}\Omega_{cell} k_{B}T^{2}}\sum_{\mathbf{q}\mu}v_{\mu}(\mathbf{q})^{2}\omega_{\mu}(\mathbf{q})^{2}n_{B}(\omega_{\mu}(\mathbf{q}))[n_{B}(\omega_{\mu}(\mathbf{q}))+1]\tau_{\mu}(\mathbf{q}).
+\end{equation}
+
+Summary:
+\begin{itemize}
+\item Anharmonic free energy
+\item Phase transition temperature
+\item Anharmonic phonons
+\item Lattice thermal conductivity
+\end{itemize}
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
