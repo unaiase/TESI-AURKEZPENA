@@ -683,11 +683,45 @@ This is the case in SnTe (Kai Chang et al. Science 353, 6296 (2016))
 \begin{frame}
 
 \frametitle{Monolayer SnSe}
-\vspace{0.5cm}
 \begin{center}
- \includegraphics[width=0.55\linewidth]{Pictures/MonoSnSe/monolayer-structure.pdf}
- \includegraphics[width=0.55\linewidth]{Pictures/MonoSnSe/transition-mono.pdf}
+ \includegraphics[width=0.49\linewidth]{Pictures/MonoSnSe/monolayer-structure.pdf}
+ \includegraphics[width=0.49\linewidth]{Pictures/MonoSnSe/transition-mono.pdf}
 \end{center}
+\begin{itemize}
+ \item This is the ferroelectric transition
+ \item a) High symmetry phase ($Q=0$) $Pnmm$
+ \item b) Low symmetry phase ($Q\ne0$) $Pnm2_{1}$
+ \item Atomic displacements correpond to a phonon at the $\Gamma$ point
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Monolayer SnSe}
+\begin{center}
+ \includegraphics[width=0.8\linewidth]{Pictures/MonoSnSe/harmonic-mono.eps}
+\end{center}
+\begin{itemize}
+ \item We perform the SSCHA calculation only within PBE
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Monolayer SnSe}
+\begin{center}
+ \includegraphics[width=0.75\linewidth]{Pictures/MonoSnSe/freq-mono.eps}
+\end{center}
+\begin{itemize}
+ \item Good agreement with other theoretical calculations
+ \item Strong supercell size dependence on $T_{c}$
+\end{itemize}
 
 \end{frame}
 
@@ -698,32 +732,11 @@ This is the case in SnTe (Kai Chang et al. Science 353, 6296 (2016))
 \frametitle{Monolayer SnSe}
 \vspace{0.5cm}
 \begin{center}
- \includegraphics[width=0.85\linewidth]{Pictures/MonoSnSe/harmonic-mono.eps}
+ \includegraphics[width=0.8\linewidth]{Pictures/MonoSnSe/sscha-mono.eps}
 \end{center}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-
-\frametitle{Monolayer SnSe}
-\vspace{0.5cm}
-\begin{center}
- \includegraphics[width=0.85\linewidth]{Pictures/MonoSnSe/freq-mono.eps}
-\end{center}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-
-\frametitle{Monolayer SnSe}
-\vspace{0.5cm}
-\begin{center}
- \includegraphics[width=0.85\linewidth]{Pictures/MonoSnSe/sscha-mono.eps}
-\end{center}
+\begin{itemize}
+ \item Tiny instabilities do not allow us to compute $\kappa_{l}$
+\end{itemize}
 
 \end{frame}
 
@@ -734,7 +747,11 @@ This is the case in SnTe (Kai Chang et al. Science 353, 6296 (2016))
 \frametitle{Monolayer SnSe}
 Conclusions:
 \begin{itemize}
-\item Unstable SSCHA auxiliary phonons related to the 2D symmetry of the system.
+\item We theoretically predict the ferroelectric phase transition
+\item Unstable Fourier interpolation of the SSCHA auxiliary phonons
+\begin{itemize}
+ \item Motivation for the study of the anharmonic effects on the lowest energy acoustic branch of 2D materials.
+\end{itemize}
 \end{itemize}
 
 \end{frame}
@@ -816,6 +833,10 @@ What have we done?
 \begin{center}
  \includegraphics[width=0.65\linewidth]{Pictures/Graphene/lattice.eps}
 \end{center}
+\begin{itemize}
+ \item First of all we get a strain less membrane
+ \item Strain linearizes the ZA dispersion
+\end{itemize}
 
 \end{frame}
 
@@ -842,7 +863,7 @@ What have we done?
  \end{itemize}
  \begin{center}
   \includegraphics[width=0.53\linewidth]{Pictures/Graphene/rms.eps}
-  \includegraphics[width=0.45\linewidth]{Pictures/Graphene/lwmembrane.eps}
+  \includegraphics[width=0.45\linewidth]{Pictures/Graphene/lwatomistic.eps}
  \end{center}
  \begin{itemize}
   \item The SCHA linearisation clearly removes the problems.
@@ -854,13 +875,18 @@ What have we done?
 
 \begin{frame}
 
-\frametitle{Graphene}
-\begin{center}
- \includegraphics[width=0.6\linewidth]{Pictures/Graphene/membrane.eps}
-\end{center}
+ \frametitle{Graphene}
+ \begin{multline}
+ \nonumber
+  V=\frac{1}{2}\int_{\Omega}{d^{2}x[\kappa(\partial^{2}h)^{2}+C^{ijkl}\partial_{i}u_{j}\partial_{k}u_{l}+C^{ijkl}\partial_{i}u_{j}\partial_{k}h\partial_{l}h \\ +\frac{C^{ijkl}}{4}\partial_{i}h\partial_{j}h\partial_{k}h\partial_{l}h
+	 \color{red}  +\frac{C^{ijkl}}{2}\partial_{i}\boldsymbol{u}\cdot\partial_{j}\boldsymbol{u}\partial_{k}h\partial_{l}h+C^{ijkl}\partial_{i}u_{j}\partial_{k}\boldsymbol{u}\cdot\partial_{l}\boldsymbol{u} \\ \color{red}+\frac{C^{ijkl}}{4}
+    \partial_{i}\boldsymbol{u}\cdot\partial_{j}\boldsymbol{u}\partial_{k}\boldsymbol{u}\cdot\partial_{l}\boldsymbol{u}]}
+ \end{multline}
 \begin{itemize}
- \item SCHA phonons are linear.
- \item Physical phonons are quadratic.
+ \item $u_{i}(\boldsymbol{x})$ where $i=x,y$ and $h(\boldsymbol{x})$ are the in-plane and out-of-plane displacement fields.
+ \item $C^{ijkl}=\lambda\delta^{ij}\delta^{kl}+\mu(\delta^{ik}\delta^{jl}+\delta^{il}\delta^{jk})$ where $\lambda$, $\mu$ are the Lame coefficients.
+ \item $\kappa$ is the bending rigidity and $\Omega$ the area of the membrane.
+ \item $\partial_{i}u_{j}\rightarrow\partial_{i}u_{j}+\delta^{ij}\delta a$ where $\delta a=(a-a_{0})/a_{0}$.
 \end{itemize}
 
 \end{frame}
@@ -869,10 +895,29 @@ What have we done?
 
 \begin{frame}
 
- \frametitle{Graphene: Conclusions}
+\frametitle{Graphene}
+\begin{center}
+ \includegraphics[width=0.49\linewidth]{Pictures/Graphene/membrane.eps}
+ \includegraphics[width=0.49\linewidth]{Pictures/Graphene/lwmembrane.eps}
+\end{center}
+\begin{itemize}
+ \item SCHA phonons are linear.
+ \item Physical phonons are quadratic.
+ \item LA/TA linewidths decay.
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+ \frametitle{Graphene}
+Conclusions:
  \begin{enumerate}
-  \item Atomistic and continuum results are in agreement.
-  \item Anharmonicicity linearises the auxiliary phonons and removes divergences in the displacements.
+  \item We perform simulations in strain less membranes by using the SSCHA stress tensor
+  \item Anharmonicicity linearises the auxiliary phonons 
+  \item Divergencies removed, quasiparticle picture recovered
   \item Physical phonons have a quadratic dispersion as expected for RI membranes.
  \end{enumerate}
 
