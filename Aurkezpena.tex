@@ -173,10 +173,35 @@ conductivity ($\kappa=\kappa_{el} + \kappa_{l}$)
 \begin{frame}
 
 \frametitle{Introduction}
-\vspace{-0.5cm}
+\vspace{-0.25cm}
 \begin{center}
 \includegraphics[width=0.85\linewidth]{Pictures/INTRO/chalcogenides.pdf}
 \end{center}
+\vspace{-0.4cm}
+\begin{itemize}
+ \item Anharmonic effects are the key
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Introduction}
+Applications of 2D materials:
+\begin{itemize}
+  \item 2D thermoelectrics (Advanced materials 19.8 (2007): 1043-1053)
+  \item Low dimensional heat dissipators (The Journal of Physical Chemistry C 122.5 (2018): 2641-2647)
+\end{itemize}
+\begin{center}
+\vspace{-0.2cm}
+\includegraphics[width=0.5\linewidth]{Pictures/INTRO/grapheneImage.jpeg}
+\end{center}
+\vspace{-0.2cm}
+\begin{itemize}
+ \item Harmonic approximation does not work (Acoustic phonons)
+\end{itemize}
 
 \end{frame}
 
@@ -344,6 +369,7 @@ where $\phi_{ab}=\partial^{2}V/\partial u_{a}\partial u_{b}|_{0}$.
 \begin{frame}
 
 \frametitle{Theoretical framework}
+\vspace{-0.2cm}
 \begin{equation}
 \nonumber
 \mathcal{Z}_{\mu}(\mathbf{q},\omega)=\sqrt{\Omega_{\mu}^{(S)2}(\mathbf{q})+\Pi_{\mu}(\mathbf{q},\omega+i0^{+})}
@@ -354,10 +380,14 @@ where $\phi_{ab}=\partial^{2}V/\partial u_{a}\partial u_{b}|_{0}$.
 \end{equation}
 \begin{equation}
 \nonumber
+\Omega_{\mu}^{(F)}(\mathbf{q})=Re\mathcal{Z}_{\mu}(\mathbf{q},0)=\partial^{2}\mathcal{F}/\partial Q^{2},
+\end{equation}
+\begin{equation}
+\nonumber
 \Gamma_{\mu}(\mathbf{q})=-Im\mathcal{Z}_{\mu}(\mathbf{q},\Omega^{(S)}_{\mu}(\mathbf{q}))
 \end{equation}
 \begin{center}
-  \includegraphics[width=0.6\linewidth]{Pictures/THEORY/ins-toy2.eps}
+  \includegraphics[width=0.55\linewidth]{Pictures/THEORY/ins-toy2.eps}
  \end{center}
 
 \end{frame}
@@ -375,11 +405,33 @@ where $\phi_{ab}=\partial^{2}V/\partial u_{a}\partial u_{b}|_{0}$.
  \kappa_{l}=\frac{1}{N_{\mathbf{q}}\Omega_{cell} k_{B}T^{2}}\sum_{\mathbf{q}\mu}v_{\mu}(\mathbf{q})^{2}\omega_{\mu}(\mathbf{q})^{2}n_{B}(\omega_{\mu}(\mathbf{q}))[n_{B}(\omega_{\mu}(\mathbf{q}))+1]\tau_{\mu}(\mathbf{q}).
 \end{equation}
 
-Summary:
+SSCHA stress tensor (different to the BO stress tensor):
+\begin{equation}
+\nonumber
+ P_{\alpha\beta}^{SSCHA}(\boldsymbol{\mathcal{R}},\{\mathbf{a}_{i}\})=-\frac{1}{\Omega}\frac{\partial\mathcal{F}_{H}[\boldsymbol{\mathcal{R}},\{\mathbf{a}_{i}\}]}{\partial\epsilon_{\alpha\beta}}\vline_{_{_{_{_{_{_{_{
+\boldsymbol{\epsilon}=0}}}}}}}}
+\end{equation}
+
+SSCHA computation method:
+\begin{itemize}
+\item Supercell are generated with the harmonic density matrix and random numbers
+\item The forces in supercell are used to compute the gradient of $\mathcal{F}$ and interatomic force-constants
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Theoretical framework}
+SSCHA  summary:
+\vspace{0.5cm}
 \begin{itemize}
 \item Anharmonic free energy
 \item Phase transition temperature
 \item Anharmonic phonons
+\item Anharmonic stress tensor
 \item Lattice thermal conductivity
 \end{itemize}
 
@@ -414,9 +466,15 @@ Part One:
 \begin{frame}
 
 \frametitle{SnSe}
+\vspace{-0.2cm}
 \begin{center}
   \includegraphics[width=0.85\linewidth]{Pictures/SnSe/figure2.pdf}
 \end{center}
+\vspace{-0.6cm}
+\begin{tiny}
+ Ibrahim et al. Appl. Phys. Lett. 110, 032103 (2017), Zhao et al. Nature 508, 373 (2014), \\
+ Wei et al. ACS Omega 4, 5442-5450 (2019)
+\end{tiny}
 
 \end{frame}
 
@@ -552,14 +610,38 @@ Part One:
 \begin{frame}
 
 \frametitle{SnSe}
+\begin{itemize}
+ \item We use the SSCHA auxiliary phonons at $800$ K
+\end{itemize}
+\vspace{-0.3cm}
 \begin{center}
  \includegraphics[width=0.80\linewidth]{Pictures/SnSe/tk-SnSe2.eps}
 \end{center}
+\vspace{-0.3cm}
 \begin{tiny}
  L.D. Zhao et al. Nature 508, 373 (2014),
  Ibrahim et al. Appl. Phys. Lett. 110, 032103 (2017), \\
  U. Aseginolaza et al. PRL 122, 075901 (2019)
 \end{tiny}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{SnSe and SnS}
+
+What about SnS?
+\begin{center}
+ \includegraphics[width=0.43\linewidth]{Pictures/SnS/freq-sns.eps}
+ \includegraphics[width=0.40\linewidth]{Pictures/SnS/spf-sns.eps}
+\end{center}
+\begin{itemize}
+\item Second-order phase transition
+\item Strong anharmonic renormalization
+\item Non-Lorentzian phonons
+\end{itemize}
 
 \end{frame}
 
@@ -689,7 +771,7 @@ This is the case in SnTe (Kai Chang et al. Science 353, 6296 (2016))
  \includegraphics[width=0.49\linewidth]{Pictures/MonoSnSe/transition-mono.pdf}
 \end{center}
 \begin{itemize}
- \item This is the ferroelectric transition
+ \item This is the ferroelectric transition (in the monolayer)
  \item a) High symmetry phase ($Q=0$) $Pnmm$
  \item b) Low symmetry phase ($Q\ne0$) $Pnm2_{1}$
  \item Atomic displacements correpond to a phonon at the $\Gamma$ point
@@ -806,7 +888,8 @@ Part two:
  \end{center}
  \begin{itemize}
   \item $\langle u^{2}\rangle$ diverges for finite temperatures.
-  \item Finite linewidths of LA/TA modes at decreasing momenta.
+  \item Finite linewidths of LA/TA modes at decreasing momenta. Quasiparticle picture and sound propagation lost 
+	  in graphene.
   \item Both properties arise due to the quadratic ZA modes.
  \end{itemize}
 
@@ -816,18 +899,19 @@ Part two:
 
 \begin{frame}
 
- \frametitle{Graphene}
-Hypothesis
+\frametitle{Graphene}
+The problems we have mentioned are long standing problems:
 \begin{itemize}
- \item Quadratic physical phonons are expected and compatible with the absence of divergences.
+\item Perturbation theory predicts a linear dispersion
+\item The bending rigidity $\kappa(q)=\omega_{ZA}/q^{2}$ diverges
+\end{itemize}
+What phonons do we expect from a theoretical point of view?
+\begin{itemize}
+\item Phonons defined from the free energy $\mathcal{F}$ should be quadratic as the ones defined from the harmonic potential $V$. Both have the same symmetries.
 \end{itemize}
 What have we done?
 \begin{enumerate}
  \item Perform SCHA in an atomistic model using an empirical machine learning potential trained with DFT.
- \item Perform SCHA in a continuum membrane model Hamiltonian.
- \begin{itemize}
- \item Provides information at much smaller momenta.
- \end{itemize}
 \end{enumerate}
 
 \end{frame}
@@ -843,10 +927,10 @@ What have we done?
 \boldsymbol{\epsilon}=0}}}}}}}}
 \end{equation}
 \begin{center}
- \includegraphics[width=0.65\linewidth]{Pictures/Graphene/lattice.eps}
+ \includegraphics[width=0.60\linewidth]{Pictures/Graphene/lattice-new1.eps}
 \end{center}
 \begin{itemize}
- \item First of all we get a strain less membrane
+ \item Strain break rotational invariance
  \item Strain linearizes the ZA dispersion
 \end{itemize}
 
@@ -861,6 +945,9 @@ What have we done?
   \includegraphics[width=0.49\linewidth]{Pictures/Graphene/T0.eps}
   \includegraphics[width=0.49\linewidth]{Pictures/Graphene/T300.eps}
  \end{center}
+\begin{itemize}
+ \item The bending rigidity does not diverge
+\end{itemize}
  
 \end{frame}
 
@@ -870,15 +957,15 @@ What have we done?
 
  \frametitle{Graphene}
  \begin{itemize}
-  \item We calculate $\langle u^{2}\rangle$ using the density matrix given by the SCHA.
-  \item We calculate the FWHM using the SCHA phonons for the three phonon scattering phase space.
+  \item We calculate $\langle u^{2}\rangle$ using the density matrix given by the SCHA
+  \item We calculate the FWHM using the SCHA phonons for the three phonon scattering phase space
  \end{itemize}
  \begin{center}
   \includegraphics[width=0.53\linewidth]{Pictures/Graphene/rms.eps}
   \includegraphics[width=0.45\linewidth]{Pictures/Graphene/lwatomistic.eps}
  \end{center}
  \begin{itemize}
-  \item The SCHA linearisation clearly removes the problems.
+  \item Quasiparticle picture and sound propagation recovered
  \end{itemize}
 
 \end{frame}
@@ -895,6 +982,7 @@ What have we done?
     \partial_{i}\boldsymbol{u}\cdot\partial_{j}\boldsymbol{u}\partial_{k}\boldsymbol{u}\cdot\partial_{l}\boldsymbol{u}]}
  \end{multline}
 \begin{itemize}
+ \item This is an universal potential for all 2D materials
  \item $u_{i}(\boldsymbol{x})$ where $i=x,y$ and $h(\boldsymbol{x})$ are the in-plane and out-of-plane displacement fields.
  \item $C^{ijkl}=\lambda\delta^{ij}\delta^{kl}+\mu(\delta^{ik}\delta^{jl}+\delta^{il}\delta^{jk})$ where $\lambda$, $\mu$ are the Lame coefficients.
  \item $\kappa$ is the bending rigidity and $\Omega$ the area of the membrane.
@@ -913,9 +1001,26 @@ What have we done?
  \includegraphics[width=0.49\linewidth]{Pictures/Graphene/lwmembrane.eps}
 \end{center}
 \begin{itemize}
- \item SCHA phonons are linear.
- \item Physical phonons are quadratic.
- \item LA/TA linewidths decay.
+ \item SCHA phonons are linear
+ \item Physical phonons are quadratic. Bending rigidity does not diverge
+ \item LA/TA linewidths decay and sound can propagate
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Graphene}
+What happens at higher temperatures?
+\begin{center}
+ \includegraphics[width=0.60\linewidth]{Pictures/Graphene/lattice.eps}
+\end{center}
+\begin{itemize}
+\item First of all: QH does not work
+\item At high temperaures MD and SSCHA do not match
+\item Corrugated phase at high temperatures?
 \end{itemize}
 
 \end{frame}
@@ -930,11 +1035,27 @@ Conclusions:
   \item We perform simulations in strain less membranes by using the SSCHA stress tensor
   \item Anharmonicicity linearises the auxiliary phonons 
   \item Divergencies removed, quasiparticle picture recovered
-  \item Physical phonons have a quadratic dispersion as expected for RI membranes.
+  \item Physical phonons have a quadratic dispersion as expected for RI membranes
+  \item Universal features for all 2D materials
  \end{enumerate}
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{General conclusions}
+\begin{itemize}
+\item Anharmonicity crucial for undestanding fase stabilities
+\item Efficient thermoelectrics show strongly anharmonic non-Lorentzian phonons
+\item Non-perturbative force-constants are important in efficient thermoelectrics
+\item Anharmonicity linearizes SSCHA auxiliary phonons and solves problems in 2D materials
+\item The physical phonons of 2D materials are quadratic, as expected by symmetry
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
