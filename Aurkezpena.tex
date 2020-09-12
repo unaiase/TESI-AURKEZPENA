@@ -35,7 +35,7 @@
 
 \author{Unai Aseguinolaza Aguirreche}
 \title{Anharmonic effects in thermoelectric and 2D materials}
-\institute{Supervided by Aitor Bergara and Ion Errea}
+\institute{Supervised by Aitor Bergara and Ion Errea}
 \date{\today}
 \titlegraphic{\includegraphics[width=.35\textwidth,height=.25\textheight]{Pictures/LOGOS/EHU.jpg}
               \includegraphics[width=.25\textwidth,height=.3\textheight]{Pictures/LOGOS/CFM.jpg}
@@ -339,7 +339,7 @@ where $\phi_{ab}=\partial^{2}V/\partial u_{a}\partial u_{b}|_{0}$.
 \begin{itemize}
  \item $\overset{(3)}{\boldsymbol{\Phi}}=\left\langle\frac{\partial^{3}V}{\partial\boldsymbol{R}^{3}}\right\rangle_{\rho_{\mathcal{H}}}$, \hspace{0.2cm}
        $\overset{(4)}{\boldsymbol{\Phi}}=\left\langle\frac{\partial^{4}V}{\partial\boldsymbol{R}^{4}}\right\rangle_{\rho_{\mathcal{H}}}$, and
-       $\Lambda\equiv\Lambda(\boldsymbol{\Phi})$.
+       $\Lambda\equiv\Lambda(\boldsymbol{\Phi},T)$.
 \item They are different to the perturbative ones $[\partial^{3}V/\partial\boldsymbol{R}^{3}]_{0}$, $[\partial^{4}V/\partial\boldsymbol{R}^{4}]_{0}$
 \end{itemize}
 
@@ -380,7 +380,7 @@ where $\phi_{ab}=\partial^{2}V/\partial u_{a}\partial u_{b}|_{0}$.
 \end{equation}
 \begin{equation}
 \nonumber
-\Omega_{\mu}^{(F)}(\mathbf{q})=Re\mathcal{Z}_{\mu}(\mathbf{q},0)=\partial^{2}\mathcal{F}/\partial Q^{2},
+\Omega_{\mu}^{(F)}(\mathbf{q})=Re\mathcal{Z}_{\mu}(\mathbf{q},0)=\partial^{2}\mathcal{F}/\partial \boldsymbol{\mathcal{R}}^{2},
 \end{equation}
 \begin{equation}
 \nonumber
@@ -415,7 +415,7 @@ SSCHA stress tensor (different to the BO stress tensor):
 SSCHA computation method:
 \begin{itemize}
 \item Supercell are generated with the harmonic density matrix and random numbers
-\item The forces in supercell are used to compute the gradient of $\mathcal{F}$ and interatomic force-constants
+\item The forces in supercell are used to compute the gradient of $\mathcal{F}$ and interatomic force-constants (forces at any theoretical level)
 \end{itemize}
 
 \end{frame}
@@ -503,6 +503,10 @@ Part One:
 \begin{center}
   \includegraphics[width=0.85\linewidth]{Pictures/SnSe/freq-main.eps}
 \end{center}
+\vspace{-0.2cm}
+\begin{itemize}
+\item We use LDA/Exp for the computations 
+\end{itemize}
 
 \end{frame}
 
@@ -567,10 +571,14 @@ Part One:
 \begin{frame}
 
 \frametitle{SnSe}
-\vspace{-0.5cm}
+\begin{itemize}
+ \item We use the SSCHA auxiliary phonons at $800$ K
+\end{itemize}
+\vspace{-0.3cm}
 \begin{center}
  \includegraphics[width=0.75\linewidth]{Pictures/SnSe/tk-SnSe1.eps}
 \end{center}
+\vspace{-0.3cm}
 \begin{tiny}
  L.D. Zhao et al. Nature 508, 373 (2014),
  Ibrahim et al. Appl. Phys. Lett. 110, 032103 (2017), \\
@@ -657,7 +665,7 @@ What about SnS?
  \includegraphics[width=0.40\linewidth]{Pictures/SnS/spf-sns.eps}
 \end{center}
 \begin{itemize}
-\item Second-order phase transition
+\item Second-order phase transition, best agreement with LDA/Exp
 \item Strong anharmonic renormalization
 \item Non-Lorentzian phonons
 \end{itemize}
@@ -788,6 +796,7 @@ This is the case in SnTe (Kai Chang et al. Science 353, 6296 (2016))
  \includegraphics[width=0.8\linewidth]{Pictures/MonoSnSe/harmonic-mono.eps}
 \end{center}
 \begin{itemize}
+ \item The calculations are done with theoretical lattice parameters
  \item We perform the SSCHA calculation only within PBE
 \end{itemize}
 
@@ -903,7 +912,7 @@ Part two:
 The problems we have mentioned are long standing problems:
 \begin{itemize}
 \item Perturbation theory predicts a linear dispersion
-\item The bending rigidity $\kappa(q)=\omega_{ZA}/q^{2}$ diverges
+\item The bending rigidity $\kappa(q)\propto\omega_{ZA}/q^{2}$ diverges
 \end{itemize}
 What phonons do we expect from a theoretical point of view?
 \begin{itemize}
@@ -941,10 +950,12 @@ What have we done?
 \begin{frame}
 
  \frametitle{Graphene}
+ ZA phonons
   \begin{center}
   \includegraphics[width=0.49\linewidth]{Pictures/Graphene/T0.eps}
   \includegraphics[width=0.49\linewidth]{Pictures/Graphene/T300.eps}
  \end{center}
+\vspace{-0.3cm}
 \begin{itemize}
  \item The bending rigidity does not diverge
 \end{itemize}
@@ -1020,7 +1031,7 @@ What happens at higher temperatures?
 \begin{itemize}
 \item First of all: QH does not work
 \item At high temperaures MD and SSCHA do not match
-\item Corrugated phase at high temperatures?
+\item Corrugated phase at high temperatures? (FUTURE RESEARCH)
 \end{itemize}
 
 \end{frame}
@@ -1047,11 +1058,35 @@ Conclusions:
 
 \frametitle{General conclusions}
 \begin{itemize}
-\item Anharmonicity crucial for undestanding fase stabilities
+\item Anharmonicity crucial for undestanding phase stabilities
 \item Efficient thermoelectrics show strongly anharmonic non-Lorentzian phonons
 \item Non-perturbative force-constants are important in efficient thermoelectrics
-\item Anharmonicity linearizes SSCHA auxiliary phonons and solves problems in 2D materials
+\item Quasiparticle picture of phonons and sound propagation recovered by anharmonicity
 \item The physical phonons of 2D materials are quadratic, as expected by symmetry
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Acknowledgements}
+Supervisors:
+\begin{itemize}
+\item Ion Errea and Aitor Bergara
+\end{itemize}
+All the group members:
+\begin{itemize}
+\item Miguel Borinaga
+\item Raffaello Bianco
+\end{itemize}
+Collaborators:
+\begin{itemize}
+\item Lorenzo Monacelli 
+\item Francesco Mauri 
+\item Matteo Calandra 
+\item Lorenzo Paulatto 
 \end{itemize}
 
 \end{frame}
